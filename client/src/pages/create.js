@@ -1,4 +1,4 @@
- import React, { useState } from "react";
+import React, { useState } from "react";
 
 function ProjectForm() {
   const [name, setName] = useState("");
@@ -20,53 +20,61 @@ function ProjectForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name of the project:
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto my-4">
+      <label className="block mb-2">
+        <span className="text-gray-700">Name of the project:</span>
         <input
+          className="form-input mt-1 block w-full"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
       </label>
-      <br />
-      <label>
-        Group members:
+      <label className="block mb-2">
+        <span className="text-gray-700">Group members:</span>
         <input
+          className="form-input mt-1 block w-full"
           type="text"
           value={members}
           onChange={(e) => setMembers(e.target.value)}
         />
       </label>
-      <br />
-      <label>
-        Desired due date:
+      <label className="block mb-2">
+        <span className="text-gray-700">Desired due date:</span>
         <input
+          className="form-input mt-1 block w-full"
           type="date"
           value={dueDate}
           onChange={(e) => setDueDate(e.target.value)}
         />
       </label>
-      <br />
-      <label>
-        Priority:
-        <select value={priority} onChange={(e) => setPriority(e.target.value)}>
+      <label className="block mb-2">
+        <span className="text-gray-700">Priority:</span>
+        <select
+          className="form-select mt-1 block w-full"
+          value={priority}
+          onChange={(e) => setPriority(e.target.value)}
+        >
           <option value="">--Select--</option>
           <option value="Low">Low</option>
           <option value="Medium">Medium</option>
           <option value="High">High</option>
         </select>
       </label>
-      <br />
-      <label>
-        Notes:
-        <textarea value={notes} onChange={(e) => setNotes(e.target.value)} />
+      <label className="block mb-2">
+        <span className="text-gray-700">Notes:</span>
+        <textarea
+          className="form-textarea mt-1 block w-full"
+          value={notes}
+          onChange={(e) => setNotes(e.target.value)}
+        />
       </label>
-      <br />
-      <button type="submit">Create</button>
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        type="submit"
+      >
+        Create
+      </button>
     </form>
   );
 }
-
-
-// havent added the tailwind yet. next on the to-do list!
