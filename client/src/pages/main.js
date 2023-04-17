@@ -1,6 +1,7 @@
-function App() {
-      
-    return (
+import 'tailwindcss/tailwind.css';
+
+
+const Main =() =>{
         <div class="bg-blue-500   ">
         <div class="flex justify-center container mx-auto my-auto w-screen h-screen items-center flex-col">
             <div class="text-slate-100 items-center">
@@ -32,5 +33,6 @@ function App() {
         
         
     </div>
-    );
+    
   }
+  export default Main;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 
-import { ADD_PROJECT } from '../../utils/mutations';
-import { QUERY_PROJECTS } from '../../utils/queries';
+import { ADD_PROJECT } from '../utils/mutations';
+import { QUERY_PROJECTS } from '../utils/queries';
 
 const ProjectForm = () => {
   const [formState, setFormState] = useState({
@@ -18,7 +18,7 @@ const ProjectForm = () => {
 
         cache.writeQuery({
           query: QUERY_PROJECTS,
-          data: { thoughts: [addProject, ...prjects] },
+          data: { projects: [addProject, ...projects] },
         });
       } catch (e) {
         console.error(e);
