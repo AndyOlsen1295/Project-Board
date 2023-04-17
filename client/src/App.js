@@ -35,6 +35,7 @@ import Home from './pages/home';
 import Create from './pages/create';
 import Main from './pages/main';
 import Project from './pages/project';
+import Header from './components/header';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -55,7 +56,7 @@ function App() {
               />
             </Routes>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Router>
     </ApolloProvider>
