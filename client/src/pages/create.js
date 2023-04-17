@@ -68,5 +68,5 @@ function ProjectForm() {
   );
 }
 
-
+export default ProjectForm;
 // havent added the tailwind yet. next on the to-do list!
