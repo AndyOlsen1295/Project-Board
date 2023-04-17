@@ -1,6 +1,6 @@
 import 'tailwindcss/tailwind.css';
-import {useQuery} from 'apollo/client'
-import ProjectForm from '../components/ProjectForm'
+import {useQuery} from '@apollo/client'
+import ProjectForm from '../components/index'
 
 
 import {QUERY_PROJECTS} from '../utils/queries'
@@ -39,7 +39,7 @@ import {QUERY_PROJECTS} from '../utils/queries'
           <div>
             {loading ? (
               <div>Loading...</div>
-            ) : }
+            ) : null }
 
           </div>
         </div>

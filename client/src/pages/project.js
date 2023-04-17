@@ -1,4 +1,5 @@
 // this page will show the project you have clicked on
+import useState from 'react';
 
 function App() {
   const [comments, setComments] = useState([]);
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <Box>
+      {/* <Box>
         <h1 className="text-2xl font-bold">Hello, world!</h1>
         <p className="text-gray-800 mt-2">This is the project box. </p>
         <CommentButton onClick={() => setShowCommentForm(true)} />
@@ -20,7 +21,7 @@ function App() {
         {comments.map((comment, index) => (
           <p className="text-gray-800 mt-2" key={index}>{comment}</p>
         ))}
-      </Box>
+      </Box> */}
     </div>
   );
 }
