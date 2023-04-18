@@ -1,9 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const styles = {
-//   navbar: {
-
-//   },
   heading: {
     display: 'inline',
     listStyle: 'none',
@@ -22,13 +20,20 @@ const styles = {
 function Navbar() {
   return (
     <div style={styles.heading}>
-      <p style={styles.clickLinks}>Dashboard</p>
-      <p style={styles.clickLinks}>Create Project</p>
-      <p style={styles.clickLinks}>Projects</p>
-      <p style={styles.clickLinks}>Login / SignUp</p>
+      <Link className="btn btn-lg btn-primary m-2" to="/">
+        Home
+      </Link>
+      <Link style={styles.clickLinks} className="btn btn-lg btn-primary m-2" to="/main.js">
+        Main
+      </Link>
+      <Link style={styles.clickLinks} className="btn btn-lg btn-primary m-2" to="/project.js">
+        Project
+      </Link>
+      <Link style={styles.clickLinks} className="btn btn-lg btn-primary m-2" to="//create.js">
+        Create
+      </Link>
     </div>
   );
 }
-
 
 export default Navbar;
