@@ -20,16 +20,16 @@ const styles = {
 function Navbar() {
   return (
     <div style={styles.heading}>
-      <Link className="btn btn-lg btn-primary m-2" to="/">
+      <Link style={styles.clickLinks} to="/">
         Home
       </Link>
-      <Link style={styles.clickLinks} className="btn btn-lg btn-primary m-2" to="/main.js">
+      <Link style={styles.clickLinks} to="/main.js">
         Main
       </Link>
-      <Link style={styles.clickLinks} className="btn btn-lg btn-primary m-2" to="/project.js">
+      <Link style={styles.clickLinks} to="/project.js">
         Project
       </Link>
-      <Link style={styles.clickLinks} className="btn btn-lg btn-primary m-2" to="//create.js">
+      <Link style={styles.clickLinks} to="/create.js">
         Create
       </Link>
     </div>
