@@ -37,7 +37,10 @@ import {QUERY_PROJECTS} from '../utils/queries'
             <ProjectForm />
           </div>
           <div>
-              <div>Loading...</div>          
+            {loading ? (
+              <div>Loading...</div>
+            ) : null }
+
           </div>
         </div>
       </main>

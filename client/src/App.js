@@ -35,6 +35,7 @@ import Home from './pages/home';
 import Create from './pages/create';
 import Main from './pages/main';
 import Project from './pages/project';
+import Header from './components/header';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -46,14 +47,28 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <div>
-            <Routes>
-              <Route 
-                path="/" 
-                element={<Home />} 
-              />
-            </Routes>
-          </div>
+          <Header></Header>
+            <div>
+              <Routes>
+                <Route
+                path="/"
+                element={<Home />}
+                />
+                {/* <Route 
+                path="/main"
+                element={<Main />}
+                /> */}
+                <Route
+                path="/project"
+                element={<Project />}
+                />
+                <Route
+                path="/create"
+                element={<Create />}
+                />
+              </Routes>
+            </div>
+          {/* <Footer /> */}
         </div>
       </Router>
     </ApolloProvider>
