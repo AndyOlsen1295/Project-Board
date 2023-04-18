@@ -3,23 +3,35 @@ import { CommentForm } from 'react-router-dom';
 
 // this page will show the project you have clicked on
 import 'tailwindcss/tailwind.css';
-import {useQuery} from '@apollo/client';
-import ProjectForm from '../components/index';
+import { useQuery } from '@apollo/client';
+import { QUERY_PROJECTS } from '../utils/queries'
 import {useState} from 'react';
+import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import React from 'react';
 
-const Project = ({ project = [], title = 'Projects' }) => {
-  if(!Array.isArray(project)) {
+
+
+
+const Project = () => {
+  //I need to use useQuery to pull in the project.
+
+  const { loading, data, error } = useQuery(QUERY_PROJECTS
+  )
+  console.log(data)
+  console.log(error)
+  if(!Array.isArray(projects)) {
     return <h3>Invalid Project data....</h3>
   }
-  if(!project.length) {
+  
+  if(!projects.length) {
     return <h3>No Projects yet...</h3>
   }
+  
   return(
     <div>
-      <h3>{title}</h3>
-      {project?.map(({ _id, projectName, createdAt, projectText}) => (
+      {/* <h3>{name}</h3> */}
+      {projects?.map(({ _id, projectName, projectText}) => (
         <div key={_id}>
           <h4>
             {projectName} <br />
@@ -27,12 +39,11 @@ const Project = ({ project = [], title = 'Projects' }) => {
             </span>
           </h4>
           <div className="card-body bg-light p-2">
-            <p>{projectText}</p>
           </div>
           {/* Create a link to this thought's page to view its comments using `<Link>` component */}
           <Link
             className="btn btn-primary btn-block btn-squared"
-            to={`/projects/${_id}`}
+            to={`/project/${_id}`}
           >
             Make sure to add something here!
           </Link>

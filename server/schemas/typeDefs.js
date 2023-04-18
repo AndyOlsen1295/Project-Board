@@ -4,15 +4,13 @@ const typeDefs = gql`
 type Project {
     _id: ID
     name: String
-    createdAt: String
     projectText: String
-    comments: [Comment]!
+    comments: [Comment]
 }
 
 type Comment {
     _id: ID
     commentText: String
-    createAt: String
 }
 
 type Query {

@@ -85,14 +85,14 @@ const ProjectForm = () => {
     <div style={styles.indexForm}>
       <h2 style={styles.singleSection}>What project are we creating today??</h2>
 
-      <p
+      <div
         className={`m-0 ${
           characterCount === 280 || error ? 'text-danger' : ''
         }`}
       >
-        <p style={styles.singleSection}>Character Count: {characterCount}/280</p>
+        <div style={styles.singleSection}>Character Count: {characterCount}/280</div>
         {error && <span className="ml-2">Something went wrong...</span>}
-      </p>
+      </div>
       <form style={styles.singleSection}
         className="flex-row justify-center justify-space-between-md align-center"
         onSubmit={handleFormSubmit}

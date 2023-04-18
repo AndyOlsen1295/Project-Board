@@ -3,21 +3,21 @@ const { Schema, model } = require('mongoose');
 const projectSchema = new Schema({
   name: {
     type: String,
-    required: true,
+    required: false,
     unique: true,
     trim: true,
   },
-  createdAt: [
-    {
-      type: Date,
-      default: Date.now,
-      get: (timestamp) => dateFormat(timestamp)
-    },
-  ],
+  // createdAt: [
+  //   {
+  //     type: Date,
+  //     default: Date.now,
+  //     get: (timestamp) => dateFormat(timestamp)
+  //   },
+  // ],
   projectText: {
     type: String,
     required: true,
-    minlength: 60,
+    minlength: 1,
     maxlength: 500,
     trim: true,
   },

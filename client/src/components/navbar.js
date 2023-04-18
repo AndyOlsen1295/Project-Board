@@ -23,13 +23,13 @@ function Navbar() {
       <Link style={styles.clickLinks} to="/">
         Home
       </Link>
-      <Link style={styles.clickLinks} to="/main.js">
+      <Link style={styles.clickLinks} to="/main">
         Main
       </Link>
-      <Link style={styles.clickLinks} to="/project.js">
+      <Link style={styles.clickLinks} to="/project">
         Project
       </Link>
-      <Link style={styles.clickLinks} to="/create.js">
+      <Link style={styles.clickLinks} to="/create">
         Create
       </Link>
     </div>

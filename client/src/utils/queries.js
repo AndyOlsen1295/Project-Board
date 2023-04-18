@@ -1,18 +1,22 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_PROJECTS = gql`
+<<<<<<< Updated upstream
   query getProject {
     project {
+=======
+query Query {
+  projects {
+    projectText
+    name
+    _id
+    comments {
+      commentText
+>>>>>>> Stashed changes
       _id
-      name
-      createdAt
-      projectText
-      comments{
-        commentText
-        createdAt
-      }
     }
   }
+}
 `;
 
 export const QUERY_PROFILE = gql`

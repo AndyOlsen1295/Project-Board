@@ -13,8 +13,8 @@ const resolvers = {
     }, //end of Query
 
     Mutation: {
-        addProject: async(parent, {projectText, }) => {
-            return Project.create({ projectText })
+        addProject: async(parent, {projectText, name }) => {
+            return Project.create({ projectText, name })
         },
         addComment: async(parent, { projectId, commentText }) => {
             return Project.findOneAndUpdate(
