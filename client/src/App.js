@@ -47,15 +47,27 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <Header />
-          <div>
-            <Routes>
-              <Route 
-                path="/" 
-                element={<Home />} 
-              />
-            </Routes>
-          </div>
+          <Header></Header>
+            <div>
+              <Routes>
+                <Route
+                path="/"
+                element={<Home />}
+                />
+                {/* <Route 
+                path="/main"
+                element={<Main />}
+                /> */}
+                <Route
+                path="/project"
+                element={<Project />}
+                />
+                <Route
+                path="/create"
+                element={<Create />}
+                />
+              </Routes>
+            </div>
           {/* <Footer /> */}
         </div>
       </Router>
